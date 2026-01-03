@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        android:layout_marginBottom="70dp"> <!-- space for footer -->
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/app_logo"
+                    android:contentDescription="@string/app_name"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="20sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/secondaryColor"/>
+            </LinearLayout>
+
+            <!-- Section title: Summary -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Habits Summary"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Summary boxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:padding="12dp"
+                    android:background="@color/backgroundLight">
+                    <TextView
+                        android:id="@+id/tvTotalHabits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total\n0"
+                        android:textSize="18sp"
+                        android:textColor="@color/secondaryColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:padding="12dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/backgroundLight">
+                    <TextView
+                        android:id="@+id/tvCompletedHabits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Completed\n0"
+                        android:textSize="18sp"
+                        android:textColor="@color/secondaryColor" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Section title: Completion Pie Chart -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completion Overview"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginTop="16dp"/>
+
+            <!-- PieChart -->
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Section title: Progress Line Chart -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Completion Progress"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginTop="16dp"/>
+
+            <!-- LineChart -->
+
+            <!-- Mood section -->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Mood"
+                android:textStyle="bold"
+                android:layout_marginTop="26dp"
+                android:textColor="@color/secondaryColor" />
+
+            <TextView
+                android:id="@+id/tvTodaysMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😃"
+                android:textSize="46sp"
+                android:layout_marginTop="10dp" />
+
+            <!-- 💧 Hydration Status Card -->
+            <LinearLayout
+                android:id="@+id/cardHydration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_background"
+                android:elevation="8dp">
+
+                <TextView
+                    android:id="@+id/tvHydrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💧 Hydration Reminder"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/secondaryColor"
+                    android:letterSpacing="0.05" />
+
+                <TextView
+                    android:id="@+id/tvHydrationStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Interval: Every 2 hours\nNext Reminder: 12:00 PM"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondaryColor" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed bottom nav -->
+    <!-- Fixed bottom nav -->
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

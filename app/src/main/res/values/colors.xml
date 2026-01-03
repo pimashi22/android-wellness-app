@@ -1,0 +1,17 @@
+<resources>
+    <!-- Core Theme Colors -->
+    <color name="primaryColor">#D0D2D2</color> <!-- light grey -->
+    <color name="secondaryColor">#1B4332</color> <!-- Dark green -->
+    <color name="accentColor">#FFFFFF</color> <!-- white  -->
+
+    <!-- Supporting Colors -->
+    <color name="textPrimary">#FFFFFF</color> <!-- white -->
+    <color name="textSecondary">#757575</color> <!-- Gray -->
+    <color name="backgroundLight">#F9F9F9</color> <!-- Light background -->
+
+    <!-- Custom Chart Colors -->
+    <color name="chartCompleted">#1B4332</color> <!-- Dark green -->
+    <color name="chartPending">#FF9800</color> <!-- Orange -->
+    <color name="darkText">#1A1A1A</color> <!-- dark gray/black tone -->
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.moodee">
+
+    <!-- Android 13 notification permission (runtime request required) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Moodee">
+
+        <!-- Launch screen -->
+        <activity
+            android:name=".ui.launch.LaunchActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Onboarding -->
+        <activity android:name=".ui.onboarding.OnboardingActivity"/>
+        <!-- Placeholder Home -->
+        <activity android:name=".ui.home.HomeActivity"/>
+
+        <activity android:name=".ui.habits.HabitsActivity"/>
+        <receiver
+            android:name=".receivers.AlarmReceiver"
+            android:exported="true" />
+
+        <activity android:name=".ui.mood.MoodActivity" />
+
+        <activity android:name=".ui.settings.SettingsActivity" />
+
+
+
+    </application>
+</manifest>

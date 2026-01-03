@@ -1,0 +1,18 @@
+<resources>
+    <!-- already existing app_name etc. -->
+
+    <string name="app_name">Moodee</string>
+
+    <!-- 🔑 Add this -->
+    <string-array name="freq_array">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+</resources>
