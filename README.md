@@ -69,6 +69,29 @@ app/
 6. Run the app using:
    - Android Emulator
    - Physical Android device (USB debugging enabled)
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="home2.png" width="220"/>
+      <br/>
+      <b>Home Screen</b>
+    </td>
+    <td align="center">
+      <img src="Habit.png" width="220"/>
+      <br/>
+      <b>Dail Habit Screen</b>
+    </td>
+    <td align="center">
+      <img src="mood.png" width="220"/>
+      <br/>
+      <b>Mood Journaling Screen</b>
+    </td>
+  </tr>
+</table>
    
 
   
